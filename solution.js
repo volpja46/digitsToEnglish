@@ -11,3 +11,17 @@ function breakDownNumber (num){
   return thousands;
 }
 // breakDownNumber() => [ 193, 410, 9 ]
+
+const ones = [
+  "one", "two", "three", "four", "five",
+  "six", "seven", "eight", "nine", "ten",
+  "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+  "sixteen", "seventeen", "eighteen", "nineteen"
+];
+
+const tens = [
+  "ten", "twenty", "thirty", "forty", "fifty",
+  "sixty", "seventy", "eighty", "ninety"
+];
+
+const scales = ["thousand", "million", "billion", "trillion"];
