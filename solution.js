@@ -61,3 +61,12 @@ function toEnglish(num) {
 
   return words.filter(isNotNull).join(" ");
 }
+
+function appendScale(breakDownNumber, exp) {
+  var scale;
+  if(!breakDownNumber) {
+    return null;
+  }
+  scale = scales[exp - 1];
+  return [breakDownNumber, scale].filter(isNotNull).join(" ");
+}
