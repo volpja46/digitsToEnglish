@@ -53,3 +53,11 @@ function toEnglish(num) {
 
     return words.filter(isNotNull).join("-");
   }
+
+  hundreds = num / 100 | 0;
+  words.push(toEnglish(hundreds));
+  words.push("hundred");
+  words.push(toEnglish(num % 100));
+
+  return words.filter(isNotNull).join(" ");
+}
