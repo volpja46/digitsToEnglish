@@ -46,7 +46,7 @@ function toEnglish(num) {
 
   if(num < 100) {
     onesPlace = num % 10;
-    tensPlace = num / 10 | 0; // equivalent to Math.floor(num / 10)
+    tensPlace = Math.floor(number / 10) | 0;
 
     words.push(tens[tensPlace - 1]);
     words.push(toEnglish(onesPlace));
