@@ -2,7 +2,6 @@
 
 //  chunks from 0-999- @ most will be 3 digits
 function breakDownNumber (num){
-  var num = 9410193,
   thousands = [];
 
   while (num > 0){
@@ -27,13 +26,9 @@ const tens = [
 
 const scales = ["thousand", "million", "billion", "trillion"];
 
-// 3
-
 
 function isNotNull (item) {
   return !!item;
-  // double bang operator "!!"
-  // forces true or false value!
 }
 
 // translate a num from 1-999 into English
@@ -46,7 +41,7 @@ function toEnglish(num) {
 
   if(num < 100) {
     onesPlace = num % 10;
-    tensPlace = Math.floor(number / 10) | 0;
+    tensPlace = Math.floor(num / 10) | 0;
 
     words.push(tens[tensPlace - 1]);
     words.push(toEnglish(onesPlace));
@@ -70,3 +65,6 @@ function appendScale(breakDownNumber, exp) {
   scale = scales[exp - 1];
   return [breakDownNumber, scale].filter(isNotNull).join(" ");
 }
+
+// let string = breakDownNumber(9931819)
+// string.map(toEnglish).map(appendScale).reverse().join(" ")
